@@ -1,0 +1,81 @@
+//create project
+1.npx create-react-app nucampsite --template redux
+Extra Packages from nucamp
+2.npm install bootstrap@5.1.3 bootstrap-social@5.1.1 font-awesome@4.7.0 formik@2.2.9 react-router-dom@6.2.1 react-spring@9.4.5-beta.1 reactstrap@9.0.1 redux-logger@3.0.6 typeface-lobster@1.1.13 typeface-open-sans@1.1.13
+--------------------------------------------------------------------------------------
+//install react icons or use package
+npm install react-icons --save
+
+import { IconName } from "react-icons/bs";
+
+substitute the icon name for the icon copied from the website
+https://react-icons.github.io/react-icons/icons?name=bs
+
+----------------------------------------------------------------------------------------
+//pass an array in as a prop, then map over that prop which is an array
+  const dishes = [
+    'Black Bean Soup',
+    'Macaroni and Cheese',
+    'Salmon and Potatoes'
+  ];
+
+  const Main = (props) => {
+    return(
+    <section>
+          <ul>
+            {props.dishes.map((dish) =>(
+              <li>{dish}</li>
+            ))}
+          </ul>
+        </section>
+    )
+  }
+
+<Main dishes={dishes}/>
+
+-----------------------------------------------------------------------------------------
+//add images from the web
+<img src='https://images.pexels.com/photos/67468/pexels-photo-67468.jpeg?auto=compress&cs=tinysrgb&w=600' />
+-----------------------------------------------------------------------------------
+//shortcut to toggle explorer in vscode
+ctrl +b
+-----------------------------------------------------------------------------------
+//destructuring objects (grab the object by its key) below are the component declaration and the component
+const Test = ({library}) =>{
+    console.log(library)
+    
+  }
+<Test library='React'/>
+
+//more destructuring
+//if campsite was an array
+<CampsiteCard campsite={campsite} />
+
+const CampsiteCard = ({campsite}) => {
+    const {image,name} = campsite;
+    return(
+        <Card>
+            <CardImg
+            width='100%'
+            src={image}
+            alt={name}
+            />
+            <CardImgOverlay>
+                <CardTitle>{name}</CardTitle>
+            </CardImgOverlay>
+        </Card>
+    )
+
+}
+-----------------------------------------------------------------------------------
+//more examples of destructuring
+//The first example shows how to destructure an array.
+const [banana, apple] = ['yellow','red'];
+//the variable banana will contain the value 'yellow'
+//the variable apple will contain the value 'red'
+
+//The second example shows how we can use destructuring to assign an array to the result of a function.
+const transformNum = (num) => [num * 2, num +2];
+const [numTimesTwo, numPlusTwo] = transformNum(10);
+//the variable numTimesTwo will contain the value 20
+//the variable numPlusTwo will contain the value 12
