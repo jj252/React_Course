@@ -7,9 +7,11 @@ import Footer from './components/Footer';
 
 //import CampsiteCard from './features/campsites/CampsiteCard';
 import CampsitesList from './features/campsites/CampsitesList';
-//import {CAMPSITES} from './app/shared/CAMPSITES';
+import {CAMPSITES} from './app/shared/CAMPSITES';
 
 function App() {
+  const [campsite1, campsite2, campsite3] = CAMPSITES;
+  console.log(campsite2.name);
   return (
     <div className="App">
       <Header />
