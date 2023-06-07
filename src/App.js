@@ -6,7 +6,8 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 
 //import CampsiteCard from './features/campsites/CampsiteCard';
-import CampsitesList from './features/campsites/CampsitesList';
+//import CampsitesList from './features/campsites/CampsitesList';
+import CampsitesDirectoryPage from './pages/CampsitesDirectoryPage';
 import {CAMPSITES} from './app/shared/CAMPSITES';
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <CampsitesList />
+        <CampsitesDirectoryPage />
       <Footer />
     </div>
   );
