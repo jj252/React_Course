@@ -4,6 +4,7 @@ import CampsitesList from "../features/campsites/CampsitesList";
 //import { selectRandomCampsite } from "../features/campsites/campsitesSlice";
 //import { useState } from "react";
 //import { selectCampsiteById } from "../features/campsites/campsitesSlice";
+import SubHeader from "../components/SubHeader";
 
 const CampsiteDirectoryPage = () => {
     // let selectedCampsite = selectRandomCampsite();
@@ -17,6 +18,7 @@ const CampsiteDirectoryPage = () => {
 
     return (
         <Container>
+            <SubHeader current='Directory' />
             <CampsitesList  />
         </Container>
     )
