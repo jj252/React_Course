@@ -12,6 +12,7 @@ import CampsitesDirectoryPage from './pages/CampsitesDirectoryPage';
 import {CAMPSITES} from './app/shared/CAMPSITES';
 import { Routes,Route } from 'react-router-dom';
 import CampsiteDetailPage from './pages/CampsiteDetailPage';
+import AboutPage from './pages/AboutPage';
 
 function App() {
   const [campsite1, campsite2, campsite3] = CAMPSITES;
@@ -23,6 +24,7 @@ function App() {
           <Route path='/' element={<HomePage />} />
           <Route path='contact' element={<ContactPage />} />
           <Route path='directory' element={<CampsitesDirectoryPage />} />
+          <Route path='about' element={<AboutPage />} />
           <Route path='directory/:campsiteId' 
             element={<CampsiteDetailPage />}
             />
