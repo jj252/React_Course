@@ -1,6 +1,7 @@
 import { Container,Row,Col,Card,CardBody,CardHeader } from "reactstrap";
 import SubHeader from "../components/SubHeader";
 import Footer from "../components/Footer";
+import PartnersList from "../features/partners/PartnersList";
 
 const AboutPage = () =>{
     return(
@@ -65,6 +66,7 @@ const AboutPage = () =>{
                     <h3>Community Partners</h3>
                 </Col>
             </Row>
+            <PartnersList />
         </Container>
     )
 }
